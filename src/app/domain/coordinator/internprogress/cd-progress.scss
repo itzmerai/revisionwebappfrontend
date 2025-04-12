@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+.data-table {
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d3d3d3;
+  background-color: #fff;
+  width: 100%;
+  max-width: 100%;
+  max-height: 500px; /* You can adjust this height as needed */
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-x: auto; /* Enable horizontal scrolling for small screens */
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    position: relative; /* Ensures the table header's sticky position works */
+
+    thead {
+      position: sticky; /* Makes the header sticky */
+      top: 0; /* Position the header at the top */
+      z-index: 1; /* Ensures the header stays on top of other content */
+    }
+
+    th,
+    td {
+      text-align: center; /* Center align all cells by default */
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      padding: 8px;
+      background-color: #6fb0b5;
+      color: #f6f0f0;
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    td {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px; /* Increase font size for better readability */
+      color: rgba(0, 0, 0, 0.9);
+      padding: 5px;
+      margin: 0;
+
+      // Specific styles for student info to ensure left alignment
+
+      &.action-icons {
+        display: flex; // Use flexbox for centering
+        justify-content: center; // Center content horizontally
+        gap: 10px; // Space between icons (if you have more than one)
+      }
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    // Center align action icons in the Action column
+    .action-icons {
+      text-align: center; // Center align icons in Action column
+    }
+
+    .edit-icon {
+      cursor: pointer; // Change cursor to pointer on hover
+      color: #007bff; // Optional color for edit icon
+      &:hover {
+        color: #0056b3; // Darker blue on hover
+      }
+    }
+
+    .progress-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .progress-bar {
+      width: 100px;
+      height: 8px;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      overflow: hidden;
+      align-items: center;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background-color: #4285f4; /* Blue color similar to your image */
+      transition: width 0.3s ease;
+    }
+
+    .progress-text {
+      font-size: 12px;
+      min-width: 40px;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .data-table {
+      padding: 5px;
+
+      table {
+        th,
+        td {
+          padding: 8px; /* Adjust padding for mobile */
+          font-size: 12px; /* Reduce font size for mobile */
+        }
+
+        th {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+  margin-top: 20px;
+
+  li {
+    margin: 0 5px;
+
+    a {
+      padding: 7px 15px;
+      border: 1px solid #969494;
+      border-radius: 10px;
+      color: #252525;
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-size: 13px;
+      transition: all 0.3s ease;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: #f0f0f0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    &.active a {
+      background-color: #b5c99a;
+      color: white;
+      border-color: #b5c99a;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

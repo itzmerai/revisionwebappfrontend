@@ -1,0 +1,101 @@
+// multi-select-dropdown.scss
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+.multi-select-dropdown {
+  position: relative;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1em;
+
+  .dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 0.75em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+    min-height: 38px;
+
+    .placeholder {
+      color: #999;
+    }
+
+    .selected-values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      overflow: hidden;
+
+      .selected-value {
+        background-color: #e9ecef;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.85em;
+        white-space: nowrap;
+      }
+
+      .more-count {
+        background-color: #f8f9fa;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.85em;
+        color: #6c757d;
+      }
+    }
+
+    .arrow {
+      border: solid #666;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+      margin-left: 8px;
+
+      &.up {
+        transform: rotate(-135deg);
+        margin-bottom: -3px;
+      }
+
+      &.down {
+        transform: rotate(45deg);
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  .dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 4px;
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f8f9fa;
+      }
+
+      &.selected {
+        background-color: #e9ecef;
+      }
+
+      input {
+        margin-right: 8px;
+        cursor: pointer;
+      }
+    }
+  }
+}

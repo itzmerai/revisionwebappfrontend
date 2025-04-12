@@ -1,0 +1,389 @@
+.dashb {
+  padding: 0 1em;
+  font-family: "Montserrat", sans-serif; // Apply Montserrat to the whole overview section
+  overflow: hidden;
+
+  .total-companies,
+  .total-students {
+    border-radius: 5px;
+    line-height: 4.5em;
+    margin-left: 5em;
+    gap: 8px;
+    position: relative;
+  }
+
+  .total-companies {
+    background: linear-gradient(#38e2af 0%, #27c495 72%, #229573 100%);
+  }
+
+  .total-students {
+    background: linear-gradient(#17c9ef 0%, #097187 100%);
+  }
+
+  .cards-wrapper {
+    display: grid; // Use flexbox for layout
+    justify-content: space-between; // Space between left and right cards
+    margin-bottom: 20px; // Space below cards
+    gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+
+    .left-card {
+      flex: 1; // Allow left card to take available space
+      display: flex;
+      justify-content: left; // Center align left card content
+      background-color: #fff;
+      width: 113%;
+      border-radius: 8px;
+      height: 97%;
+      margin: auto;
+      margin-bottom: 0.5em;
+
+      h2 {
+        color: #767676;
+        margin-left: 1em;
+      }
+    }
+
+    .right-cards {
+      display: flex;
+      flex-direction: column; // Stack right cards vertically
+      gap: 10px; // Space between right cards
+      position: relative;
+      .icon-cap {
+        font-size: 1.6em;
+        vertical-align: middle;
+        color: #f9f9f9;
+      }
+      .icon-task {
+        font-size: 1.3em;
+        vertical-align: middle;
+        color: #f9f9f9;
+      }
+      @media (min-width: 780px) {
+        align-items: flex-start; // Align items at the start on larger screens
+      }
+    }
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 20px;
+    color: black;
+    width: 100%; // Ensure the wrapper takes full width
+    height: 100%; // Ensure the wrapper takes full height
+
+    .card-container {
+      flex: 1.2;
+      display: flex;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      font-size: 12px;
+      color: #767676;
+      font-weight: 20px;
+      border: #ccc 1px solid;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+      h2 {
+        margin-left: 1.5em;
+        margin-top: 1.5em;
+      }
+    }
+
+    @media (min-width: 780px) {
+      flex-direction: row;
+      justify-content: space-between; /* Space between the two containers */
+    }
+
+    .chart-container {
+      flex: 2;
+      background-color: #fff;
+      padding: 10px; // Remove padding to maximize space
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      font-size: 12px;
+      color: #0b6477;
+      font-weight: 20px;
+      border: #ccc 1px solid;
+      width: 100%; // Ensure the container takes full width
+      height: 100%; // Ensure the container takes full height
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%; // Ensure it takes full width
+      height: 100%;
+
+      h2 {
+        margin-bottom: 20px; // Add some space below the heading
+      }
+    }
+
+    .second-chart-container {
+      flex: 1; /* Take up 1/3 of the space */
+      background-color: #fff;
+      padding: 1em 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 12px;
+      font-weight: 1px;
+      color: #160e46;
+      border: #ccc 1px solid;
+
+      @media (min-width: 780px) {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .cards-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin-left: 30em;
+
+    @media (min-width: 780px) {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .card {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.stats-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stats-card {
+  flex: 1;
+  padding: 20px;
+  background-color: #009688;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.recently-added-section {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  align-items: center;
+
+  h2 {
+    font-size: 18px;
+    color: #0b6477;
+    padding-left: 20%;
+    padding-bottom: 5px;
+  }
+}
+
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.students-table th,
+.students-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.students-table th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+.chart-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------------COMPANY-1DASHB -----------------------*/
+.dashboard-container {
+  .profile-picture-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    position: relative;
+
+    .profile-notification-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+
+      .company-name {
+        font-family: "Montserrat", sans-serif;
+        color: grey;
+        font-weight: 500;
+        font-size: 18px;
+        padding-top: 2em;
+        padding-right: 1.4em;
+      }
+
+      .notification-icon-wrapper {
+        position: relative;
+        cursor: pointer;
+        margin-right: 1px;
+        top: 1.3em;
+        right: 3em;
+
+        .notification-icon {
+          font-size: 35px;
+          color: #666;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: #333;
+            transform: scale(1.1);
+          }
+        }
+
+        .notification-badge {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          background-color: #ff4757;
+          color: white;
+          border-radius: 50%;
+          width: 18px;
+          height: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          font-weight: bold;
+        }
+      }
+
+      .company-profile-image {
+        width: 60px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        position: relative;
+        top: 1em;
+        right: 2.3em;
+      }
+    }
+
+    .notifications-dropdown {
+      position: absolute;
+      top: 80px;
+      right: 20px;
+      width: 350px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      overflow: hidden;
+      font-family: "Montserrat", sans-serif;
+
+      .notifications-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+
+        h4 {
+          margin: 0;
+          font-size: 16px;
+          color: #333;
+        }
+
+        .mark-all-read {
+          background: none;
+          border: none;
+          color: #3498db;
+          cursor: pointer;
+          font-size: 12px;
+          font-weight: 600;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .notifications-list {
+        max-height: 300px;
+        overflow-y: auto;
+
+        .notification-item {
+          padding: 12px 15px;
+          border-bottom: 1px solid #f5f5f5;
+          transition: background 0.2s;
+
+          &:hover {
+            background: #f9f9f9;
+          }
+
+          p {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+            color: #333;
+          }
+
+          .notification-time {
+            font-size: 12px;
+            color: #999;
+          }
+        }
+      }
+
+      .notifications-footer {
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid #eee;
+
+        button {
+          background: none;
+          border: none;
+          color: #3498db;
+          cursor: pointer;
+          font-weight: 600;
+          font-size: 13px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

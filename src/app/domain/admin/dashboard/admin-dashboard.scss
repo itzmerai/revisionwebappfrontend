@@ -1,0 +1,62 @@
+.dashboard {
+  display: flex;
+  height: 100vh;
+  background-color: #f1efef;
+  width: 100vw;
+  overflow-y: auto; /* Allow vertical scrolling if needed */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  flex-grow: 1;
+
+  .dashboard-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    .profile-picture-container {
+      display: flex;
+      justify-content: right;
+      margin-bottom: 15px; // Optional margin
+    }
+
+    .admin-text {
+      font-family: "Montserrat", sans-serif; // Apply Montserrat font
+      color: grey; // Grey text color
+      font-weight: 500;
+      font-size: 18px; // Adjust font size as needed
+      padding-top: 2.5em;
+      margin-right: 40px; // Space between text and profile icon
+    }
+
+    .profile-picture {
+      position: relative; // Fix the position of the profile icon
+      top: 1em; // Adjust the distance from the top
+      right: 2.5em; // Adjust the distance from the right
+      z-index: 1000; // Ensure it stays above other content
+      width: 80px; // Ensure width and height are equal
+      height: 80px; // Ensure width and height are equal
+      border-radius: 50%; // Makes the image circular
+      object-fit: cover; // Ensures image is scaled properly
+    }
+  }
+
+  .dashboard-header {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Vertically centers items */
+    padding: 4em 3em 1em 3em;
+    margin-bottom: 0em;
+
+    .admin-info {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        width: 50px; /* Adjust size as needed */
+        height: 50px;
+        border-radius: 50%; /* Makes the image circular */
+        object-fit: cover; /* Ensures the image fits well within the circle */
+        margin-left: 15px; /* Space between profile picture and name */
+      }
+    }
+  }
+}
