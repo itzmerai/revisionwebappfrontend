@@ -308,6 +308,7 @@ const CoordinatorStudent = () => {
     { header: "Company", key: "company_name" },
     { header: "Email", key: "student_email" },
     { header: "Status", key: "student_status" },
+    { header: "Time left", key: "student_remaining_time" },
     {
       header: "Action",
       key: "action",
