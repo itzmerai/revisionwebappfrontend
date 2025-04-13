@@ -106,10 +106,10 @@ const CoordinatorAnnouncement: React.FC = () => {
   };
 
   const announcementTypes = [
-    "General Announcement",
-    "Reminder",
-    "Urgent Announcement",
-    "Policy Update",
+    "GENERAL ANNOUNCEMENT",
+    "REMINDERS",
+    "URGENT",
+    "POLICY ANNOUNCEMENT",
   ];
 
   return (
