@@ -45,7 +45,7 @@ const InternshipReport: React.FC = () => {
     { header: "#", key: "student_id" },
     { header: "Date", key: "date" },
     {
-      header: "Morning",
+      header: "1st Period",
       key: "morning",
       render: (row: any) => (
         <div className="studenttime">
@@ -59,7 +59,7 @@ const InternshipReport: React.FC = () => {
       ),
     },
     {
-      header: "Afternoon",
+      header: "2nd Period",
       key: "afternoon",
       render: (row: any) => (
         <div className="studenttime">
