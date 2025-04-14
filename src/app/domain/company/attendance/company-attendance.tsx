@@ -108,7 +108,7 @@ const CompanyAttendance: React.FC = () => {
     { header: "Date", key: "date" },
     { header: "Student Name", key: "student_name" },
     {
-      header: "Morning",
+      header: "1st Period",
       key: "morning",
       render: (row: any) => (
         <div>
@@ -118,7 +118,7 @@ const CompanyAttendance: React.FC = () => {
       ),
     },
     {
-      header: "Afternoon",
+      header: "2nd Period",
       key: "afternoon",
       render: (row: any) => (
         <div>
